@@ -1,0 +1,229 @@
+<div class="container-fluid" style="text-align: center; width: 100%; padding: 0 0; margin-top: 60px;">
+    <h1>Da vida a un tu projecto creativo.</h1>
+    <button class="btn btn-success" (click)="newProject()"> Crea un projecto </button>
+
+    <!-- style=" height: 80vh; background-color: antiquewhite;"  display: block; height: 70vh; background-size: 100%; -->
+    <div *ngIf="!createNewProject; else newProjectTemplate">
+        <div class="container-fluid" style="margin-top: 80px;">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5">
+                    <a href="" class="">
+                        <div class="card text-bg-dark" style="margin-bottom: 20px;">
+                            <img src="../../assets/img-example.jpg" class="card-img" alt="..."
+                                style="max-height: 620px; object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="col">
+                        <div class="col-sm-12">
+                            <a href="">
+                                <div class="card text-bg-dark " style="max-height: 300px;">
+                                    <img src="../../assets/img-example2.jpg" class="card-img" alt="..."
+                                        style="max-height: 300px; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex align-items-end">
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12">
+                            <a href="">
+                                <div class="card text-bg-dark " style="max-height: 300px;  margin-top: 20px;">
+                                    <img src="../../assets/img-example3.jpg" class="card-img" alt="..."
+                                        style="max-height: 300px; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex align-items-end">
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center; padding: 0 25%; background-color: #034752; height: 600px; color: white; 
+        font-family: Times New Roman; font-size: 35px; margin-top: 80px;">
+            <p>“ Noi guardiamo a Kickstarter come la casa per le menti creative; dove le persone che credono, rispettano
+                e
+                riescono ad avere una visione possono supportare un’idea e renderla una realtà.
+                <br><p class="textSmall">— DE LA SOUL</p>
+            </p>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5" style="margin: 0 0;">
+            <div class="col-5 ">
+                <div class="row mt-4">
+                    <div class="col-11">
+                        <h2 class="text-start">
+                            Un progetto Kickstarter fa molto di più che raccogliere fondi. Costruisce una community
+                            intorno alle tue opere.
+                        </h2>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            Che tipo di progetti posso finanziare con Kickstarter?
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Kickstarter è pensato specificatamente per progetti creativi nelle seguenti categorie: Arte,
+                            Fumetti, Artigianato, Danza, Design, Moda, Cinema e video, Cibo, Giochi, Giornalismo,
+                            Musica, Fotografia, Editoriale, Tecnologia, e Teatro. Registra un album, scrivi un libro,
+                            realizza un'opera teatrale o un film: sei tu a decidere! Per saperne di più, consulta le
+                            nostre regole.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            Chi può contribuire al mio progetto?
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Milioni di persone visitano Kickstarter ogni settimana, ma i primi a sostenerti saranno
+                            sempre i tuoi conoscenti. Gli amici, i fan e le community di cui fai parte saranno i tuoi
+                            primi sostenitori, e di certo faranno in modo di spargere la voce riguardo il tuo progetto.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            Quanto lavoro è necessario per gestire un progetto?
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Ogni progetto di Kickstarter ha dei momenti entusiasmanti e stimolanti, ma la quantità di
+                            lavoro dipende generalmente dalle dimensioni e dalla complessità del progetto.
+                        </p>
+                        <p class="text-start">
+                            I primi giorni dopo la pubblicazione potresti essere molto occupato a spargere la voce nella
+                            tua community, rispondere alle domande dei potenziali sostenitori e altro ancora. Potresti
+                            anche dover passare gli ultimi giorni a fare pubblicità sui social network per raggiungere
+                            l'obiettivo del finanziamento.
+                        </p>
+                        <p class="text-start">
+                            I progetti a volte riscuotono un successo inatteso e in tal caso dovresti pensare di
+                            dedicare più tempo alla creazione e all'invio delle ricompense.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            E se ho delle domande?
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Puoi porci le tue domande tramite questo modulo di contatto. Ti consigliamo inoltre di
+                            consultare manuale del creatore, troverai consigli per avviare e gestire un progetto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; align-items: center; padding: 0 25%; background-color: #313f41; height: 500px; color: white; 
+         margin-top: 80px;">
+            <div class="ratio ratio-16x9">
+                <iframe class="" src="https://d3mlfyygrfdi2i.cloudfront.net/175c/startpage_20130916_supercut_hi.mp4"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5" style="margin: 0 0;">
+            <div class="col-5 ">
+                <div class="row mt-4">
+                    <div class="col-11">
+                        <h2 class="text-start">
+                            Perché Kickstarter?
+                        </h2>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            1 Kickstarter è un piattaforma fatta unicamente per i progetti creativi.
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Abbiamo sviluppato Kickstarter come strumento per artisti, designer, creatori, musicisti e
+                            persone creative di tutto il mondo. Siamo orgogliosi di essere l'unica piattaforma
+                            completamente dedicata alla creazione di una community intorno ai progetti creativi.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            2 Modello di finanziamento del tipo "tutto o niente".
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Il modello tutto o niente di Kickstarter ti consente di scegliere un obiettivo del
+                            finanziamento e un determinato numero di giorni per raggiungere tale obiettivo. In questo
+                            modo, non rimarrai bloccato senza abbastanza fondi per realizzare il tuo progetto. Fornisce
+                            inoltre ai sostenitori degli incentivi a contribuire di più per aiutarti a raggiungere il
+                            tuo obiettivo.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-5">
+                        <h3 class="text-start">
+                            3 La nostra community vuole sostenerti.
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-start">
+                            Milioni di sostenitori sono d’accordo, aiutare a creare qualcosa di nuovo è eccitante. Le
+                            persone amano sbirciare oltre il sipario creativo e supportare direttamente il processo
+                            creativo. Infatti, 13,9 milioni di persone hanno contribuito con oltre 3,39 miliardi di
+                            dollari per dare vita ai progetti Kickstarter nel corso degli anni.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 25%; background-color: #FFCBA9; height: 600px; color: #555; 
+        font-family: Times New Roman; font-size: 40px; margin-top: 80px;">
+            <div><p>"Un modo a disposizione di ogni mente creativa per controllare il proprio destino."
+                <br><p class="textSmall">— Brian Fargo, creatore di successo di Kickstarter</p>
+            </p>
+        </div>
+            <div>
+            <button class="btn btn-success" (click)="newProject()"> Crea un projecto </button>
+        </div>
+        </div>
+
+
+
+    </div>
+
+
+    <ng-template #newProjectTemplate>
+
+    </ng-template>
+
+</div>

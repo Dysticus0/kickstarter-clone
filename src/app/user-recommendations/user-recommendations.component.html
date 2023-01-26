@@ -1,0 +1,16 @@
+<div class="container-fluid"  style="max-width: 90%; margin-top: 50px;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"  *ngFor="let value of articles">
+           <a href=""> <div class="card">
+                <img src="{{value.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{value.title}}</h5>
+                    <p class="card-text">{{value.smallDesc}}</p>
+                </div>
+            </div>
+        </a>
+        </div>
+    </div>
+</div>
+
+

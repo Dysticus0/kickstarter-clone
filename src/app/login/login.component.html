@@ -1,0 +1,39 @@
+<div *ngIf="!createNew; else registerUser">
+  <h2 style="color: #666; text-align: center; margin-top: 80px;">Log in</h2>
+  <form [formGroup]="userForm" (ngSubmit)="validateUser(userForm.value)" class="container-fluid"
+    style="max-width: 540px;">
+    <div class="mb-3">
+      <label for="inputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" formControlName="email" required email="true">
+      <div class="fieldError" *ngIf="email.invalid && (email.dirty || email.touched)"> *Email is required </div>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" formControlName="password">
+      <div class="fieldError" *ngIf="password.invalid && (password.dirty || password.touched)"> *Password is required </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Login</button>
+    <button type="button" (click)="createNewUser()" class="btn btn-primary" style="margin-left: 4px;">New User</button>
+  </form>
+</div>
+
+<ng-template #registerUser>
+  <h2 style="color: #666; text-align: center; margin-top: 80px;">Create a new user</h2>
+  <form [formGroup]="userForm" (ngSubmit)="addNewUser(userForm.value)" class="container-fluid"
+    style="max-width: 540px;">
+    <div class="mb-3">
+      <label for="inputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+        formControlName="email" required email="true">
+        <div class="fieldError" *ngIf="email.invalid && (email.dirty || email.touched)"> *Email is required </div>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" formControlName="password">
+      <div class="fieldError" *ngIf="password.invalid && (password.dirty || password.touched)"> *Password is required </div>
+    </div>
+    <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary">Register</button>
+  </form>
+</ng-template>

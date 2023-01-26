@@ -1,0 +1,52 @@
+/*Primer Banner*/
+.header1{
+    border-bottom: 1px solid rgba(85, 85, 85, 0.218);
+}
+
+.headerGrid {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    align-items: center;
+}
+
+.headerGrid{
+    text-align: center;
+}
+
+.headerGrid>ul>li{
+    display: inline;
+    padding: 0px 10px;
+}
+
+.headerLink:hover {
+    color: green;
+}
+
+.logo {
+    font-size: 26px;
+    color: green;
+}
+
+/*Links format*/
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  
+  /* USER MENU */
+  .userMenu{
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    width: 300px;
+    background-color: #eee;
+    padding: 20px 20px;
+    border: 1px #555 solid;
+    border-radius: 5px;
+  }

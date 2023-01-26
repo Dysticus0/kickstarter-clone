@@ -1,0 +1,90 @@
+<div class="header2">
+  <ul>
+    <li><a class="mainLinks" href="">Arts</a></li>
+    <li><a class="mainLinks" href="">Comics & Illustration</a></li>
+    <li><a class="mainLinks" href="">Design & Tech</a></li>
+    <li><a class="mainLinks" href="">Film</a></li>
+    <li><a class="mainLinks" href="">Food & Craft</a></li>
+    <li><a class="mainLinks" href="">Games</a></li>
+    <li><a class="mainLinks" href="">Music</a></li>
+    <li><a class="mainLinks" href="">Publishing</a></li>
+  </ul>
+</div>
+
+<div class="mainTitle">
+  <h2>Bring a creative project to life.</h2>
+  <br>
+  <h6>ON KICKSTARTER:</h6>
+</div>
+
+<div class="analytics">
+  <ul>
+    <li>
+      <h2 style="color: #070;">1.231.231</h2>
+    </li>
+    <li>projects funded</li>
+  </ul>
+  <ul>
+    <li>
+      <h2 style="color: #070;">$456.456</h2>
+    </li>
+    <li>towards creative work</li>
+  </ul>
+  <ul>
+    <li>
+      <h2 style="color: #070;">789.789</h2>
+    </li>
+    <li>pledges</li>
+  </ul>
+</div>
+
+
+<div class="containerPers">
+  <div class="grid2Col">
+    <div>
+      <a href="">
+        <h5 class="gridTitle">TITULO</h5>
+        <div style="text-align: center;"><img class="imgSpecs" src="./../../assets/ejemplo.png" alt="Imagen"></div>
+        <h2>Pixiv Presents Artists in Taiwan and Korea</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus sit molestiae aliquam
+          temporibus facere est rerum soluta ratione unde reiciendis voluptas dolores.</p>
+        <p>By: Owner</p>
+      </a>
+    </div>
+    <div class="container2">
+      <h5 class="gridTitle">RECOMMENDED FOR YOU</h5>
+      <ul *ngFor="let value of perTeMock | paginate: { itemsPerPage: 3, currentPage: page }" style="padding: 0;">
+        <li class="perTe">
+          <img class="imgPerTe" src="{{value.imgUrl}}" alt="">
+          <div class="dataPerTe">
+              <div style="font-size: 18px;">{{value.title}} </div>
+            <div style="color: #070;">{{value.finance}} </div>
+            <div style="font-size: 14px;" >By: {{value.owner}}</div>
+          </div>
+        </li>
+      </ul>
+      <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel="" style="text-align: right; font-size: 12px;"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+
+<div class="mb-3 container-fluid" style="max-width: 80%;">
+  <div class="row gx-4">
+    <div class="col-sm-6">
+      <img
+        src="https://ksr-static.imgix.net/2560x1080-HP-LP_M100-STATIC-f39ced7.jpg?ixlib=rb-4.0.2&auto=compress%2Cformat&w=1000&fit=min&s=6e73cd1d656335e951d0cdee45575b86"
+        class="img-fluid" alt="...">
+    </div>
+    <div class="col-sm-6">
+      <div class="card-body" style="border-left: 5px solid green; padding-left: 5px;">
+        <h5 class="card-title">Piccoli progetti con ricompense speciali</h5>
+        <p class="card-text">Make 100 è il nostro invito annuale a pubblicare campagne che offrono esattamente 100
+          ricompense. L'obiettivo è incoraggiare i creatori ad assumersi dei rischi, a pensare in grande creando piccole
+          quantità e a divertirsi con i primi progetti del nuovo anno. Trova idee originali da realizzare e goditi le
+          ricompense.</p>
+      </div>
+      <a href="">Scopri progetti</a>
+    </div>
+  </div>
+</div>

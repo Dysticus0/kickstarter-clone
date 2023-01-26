@@ -1,0 +1,38 @@
+<div class="header1">
+    <div class="headerGrid">
+        <ul>
+            <li><a class="headerLink" href="">Discover</a></li>
+            <li><a class="headerLink" routerLink="/new-project">Start a project</a></li>
+        </ul>
+        <ul>
+            <li><a class="logo" routerLink="/">KICKSTARTER</a></li>
+        </ul>
+        <ul>
+            <li><a class="headerLink" href="">Search</a></li>
+            <li *ngIf="!userLogged; else elseBlock"><a class="headerLink" routerLink="/login"> Log in </a></li>
+            <ng-template #elseBlock>
+                <li><button class="headerLink" (click)="userMenu()"><img
+                            src="https://e7.pngegg.com/pngimages/619/187/png-clipart-circle-yellow-green-disk-point-orb-sphere-digital-image.png"
+                            style="max-width: 32px; margin-top: 10px; border-radius: 50%;"> </button> </li>
+            </ng-template>
+        </ul>
+    </div>
+    <div *ngIf="userMenuVal" class="userMenu">
+        <td>
+            <h4>YOUR ACCOUNT</h4>
+            <tr><a class="headerLink" href="">Projects saved</a></tr>
+            <tr><a class="headerLink" routerLink="/recommendations">Recommended for you</a></tr>
+            <tr><a class="headerLink" href="">Social subscriptions</a></tr>
+            <tr><a class="headerLink" href="">Profile</a></tr>
+            <tr><a class="headerLink" href="">Settings</a></tr>
+            <tr><a class="headerLink" href="">Messages</a></tr>
+            <tr><a class="headerLink" href="">Activities</a></tr>
+
+            <h4>PROJECTS CREATED</h4>
+            <tr><a class="headerLink" routerLink="/new-project">New</a></tr>
+
+            <tr><button class="headerLink" (click)="logOut()" routerLink="/"> Log out </button></tr>
+        </td>
+
+    </div>
+</div>
